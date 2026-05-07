@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaria: #1f99fc;
+    --primaria-escura: #1077bb;
+    --primaria-clara: #0683d6ea;
+    --fundo-claro: #f0f7fc;
+    --fundo-cartao: rgba(178, 205, 223, 0.95);
+    --texto-escuro: #1a1a2e;
+    --texto-suave: #555;
+    --branco: #ffffff;
+    --sombra: 0 4px 15px rgba(16, 119, 187, 0.15);
+    --sombra-hover: 0 8px 25px rgba(16, 119, 187, 0.25);
+    --raio: 12px;
+    --transicao: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e8f4fc 0%, #d1e8f7 50%, #b8d8f0 100%);
+    color: var(--texto-escuro);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--primaria), var(--primaria-escura));
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(16, 119, 187, 0.3);
+}
+a{
+    text-decoration: none;
+}
+
+.conteudo-cabecalho {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--branco);
+    font-weight: 700;
+}
+
+.logo p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.lista-navegacao {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link-navegacao {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+    display: block;
+}
+
+.link-navegacao:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.botao-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.botao-menu span {
+    width: 25px;
+    height: 3px;
+    background: var(--branco);
+    border-radius: 3px;
+    transition: var(--transicao);
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.container-cartoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estilos dos Cartões */
+.secao-cartao {
+    animation: aparecerCima 0.6s ease forwards;
+    opacity: 0;
+}
+
+.secao-cartao:nth-child(1) { animation-delay: 0.1s; }
+.secao-cartao:nth-child(2) { animation-delay: 0.2s; }
+.secao-cartao:nth-child(3) { animation-delay: 0.3s; }
+.secao-cartao:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes aparecerCima {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cartao {
+    background: var(--branco);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    transition: var(--transicao);
+}
+
+.cartao:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-3px);
+}
+
+.cabecalho-cartao {
+    background: linear-gradient(135deg, var(--primaria), var(--primaria-escura));
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cabecalho-cartao .icone {
+    font-size: 1.8rem;
+    color: var(--branco);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho-cartao h2 {
+    color: var(--branco);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.corpo-cartao {
+    padding: 1.5rem;
+}
+
+.corpo-cartao p {
+    color: var(--texto-suave);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.corpo-cartao p:last-child {
+    margin-bottom: 0;
+}
+
+.corpo-cartao strong {
+    color: var(--primaria-escura);
+}
+
+/* Grade de Serviços */
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.item-servico {
+    background: var(--fundo-claro);
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transicao);
+}
+
+.item-servico:hover {
+    background: var(--primaria);
+    color: var(--branco);
+    transform: scale(1.03);
+}
+
+.item-servico:hover p,
+.item-servico:hover h3 {
+    color: var(--branco);
+}
+
+.item-servico h3 {
+    font-size: 1rem;
+    color: var(--primaria-escura);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.item-servico p {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    margin: 0;
+}
+
+/* Contato */
+.informacoes-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    background: var(--fundo-claro);
+    border-radius: 8px;
+    transition: var(--transicao);
+    width: 100%;
+    max-width: 400px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    background: var(--fundo-claro);
+    border-radius: 8px;
+    transition: var(--transicao);
+}
+
+.item-contato:hover {
+    background: #e3eff7;
+}
+
+.item-contato i {
+    font-size: 1.8rem;
+    color: var(--primaria-escura);
+    min-width: 35px;
+    text-align: center;
+    transition: var(--transicao);
+}
+
+.item-contato:hover i {
+    transform: scale(1.1);
+}
+
+.item-contato .fa-phone {
+    color: #1077bb;
+}
+
+.item-contato .fa-whatsapp {
+    color: #25d366;
+}
+
+.item-contato .fa-location-dot {
+    color: #e74c3c;
+}
+
+.item-contato.localizacao {
+    justify-content: center;
+}
+
+.container-mapa {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.container-mapa iframe {
+    display: block;
+    width: 100%;
+}
+
+.item-contato .fa-instagram {
+    color: #e1306c;
+}
+
+.item-contato strong {
+    display: block;
+    color: var(--primaria-escura);
+    font-size: 0.9rem;
+}
+
+.item-contato p {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Horários */
+.lista-horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.item-horario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background: var(--fundo-claro);
+    border-radius: 8px;
+    transition: var(--transicao);
+}
+
+.item-horario:hover {
+    background: #e3eff7;
+}
+
+.item-horario span:first-child {
+    color: var(--texto-escuro);
+    font-weight: 500;
+}
+
+.item-horario strong {
+    color: var(--primaria-escura);
+}
+
+.fechado {
+    color: #e74c3c !important;
+    font-weight: 600;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primaria), var(--primaria-escura));
+    color: var(--branco);
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Responsivo - Tablet */
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    .conteudo-cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botao-menu {
+        display: flex;
+    }
+
+    .lista-navegacao {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+
+    .lista-navegacao.ativo {
+        display: flex;
+    }
+
+    .link-navegacao {
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .cabecalho-cartao h2 {
+        font-size: 1.2rem;
+    }
+
+    .corpo-cartao {
+        padding: 1.2rem;
+    }
+
+    .grade-servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .logo p {
+        font-size: 0.75rem;
+    }
+
+    .cabecalho-cartao {
+        padding: 0.8rem 1rem;
+    }
+
+    .cabecalho-cartao h2 {
+        font-size: 1.1rem;
+    }
+
+    .cabecalho-cartao .icone {
+        font-size: 1.4rem;
+    }
+
+    .item-contato i {
+        font-size: 1.5rem;
+        min-width: 28px;
+    }
+
+    .corpo-cartao {
+        padding: 1rem;
+    }
+
+    .corpo-cartao p {
+        font-size: 0.9rem;
+    }
+
+    .grade-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .item-servico {
+        padding: 1rem;
+    }
+
+    .item-horario {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .link-navegacao {
+        font-size: 0.85rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Acessibilidade (movimento reduzido) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
