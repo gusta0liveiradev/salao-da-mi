@@ -3,161 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salão da MI</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Salão da MI — Mãos e Unhas desde 1989</title>
+    <meta name="description" content="Salão da MI - Cuidado especializado para suas mãos e unhas. Experiência desde 1989. Agende seu horário!">
+    <meta name="theme-color" content="#1C1C1E">
+
+    <link rel="preload" href="./assets/css/index.css" as="style">
+    <link rel="preload" href="./assets/img/hero.webp" as="image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
-<!--QUEM ESTÁ LENDO É GAY-->
 <body>
-    <!--====================Cabeçalho====================-->
-    <header>
-        <div class="conteudo-cabecalho">
-            <div class="logo">
-                <h1>Salão da MI</h1>
-                <p>Cuidado especializado para suas mãos e unhas</p>
-            </div>
-            <nav>
-                <button class="botao-menu" id="botaoMenu" aria-label="Abrir menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="lista-navegacao" id="listaNavegacao">
-                    <li><a href="#about" class="link-navegacao">Sobre Nós</a></li>
-                    <li><a href="#services" class="link-navegacao">Serviços</a></li>
-                    <li><a href="#contact" class="link-navegacao">Contato</a></li>
-                    <li><a href="#hours" class="link-navegacao">Horários</a></li>
-                </ul>
-            </nav>
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo" aria-label="Salão da MI - Início">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Salão da MI</h1>
+                    <span>Mãos e Unhas</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#about" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="#services" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="#gallery" role="menuitem">Galeria</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contato</a></li>
+                <li role="none"><a href="https://wa.me/5511999999999" class="nav-cta" role="menuitem" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Agende
+                </a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-<!--=====================Sobre==================-->
-    <main class="container-cartoes">
-        <section id="about" class="secao-cartao">
-            <div class="cartao">
-                <div class="cabecalho-cartao">
-                    <span class="icone">&#9733;</span>
-                    <h2>Sobre Nós</h2>
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="./assets/img/hero.webp" alt="Trabalhos realizados no Salão da MI" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" aria-hidden="true">
+            <div class="hero-particle" style="left:10%;animation-delay:0s;animation-duration:18s"></div>
+            <div class="hero-particle" style="left:25%;animation-delay:3s;animation-duration:22s;width:3px;height:3px"></div>
+            <div class="hero-particle" style="left:45%;animation-delay:6s;animation-duration:16s"></div>
+            <div class="hero-particle" style="left:65%;animation-delay:2s;animation-duration:20s;width:5px;height:5px"></div>
+            <div class="hero-particle" style="left:80%;animation-delay:8s;animation-duration:24s"></div>
+            <div class="hero-particle" style="left:90%;animation-delay:4s;animation-duration:19s;width:3px;height:3px"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Desde 1989</span>
+                Excelência em manicure
+            </div>
+            <h1>Suas mãos <span>merecem</span> o melhor cuidado</h1>
+            <p>Há mais de 35 anos transformando unhas em arte com carinho, qualidade e atenção aos detalhes que fazem a diferença.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5511999999999" class="btn-primary" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Agende seu horário
+                </a>
+                <a href="#gallery" class="btn-secondary">
+                    Ver trabalhos <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Role</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-tag">Nossa História</span>
+                <h2>Paixão que virou profissão</h2>
+                <p>Conheça a trajetória de dedicação e amor pela beleza das mãos e unhas.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <img src="./assets/img/gallery/img2.webp" alt="Salão da MI" loading="lazy">
+                    <div class="about-exp">
+                        <strong>35+</strong>
+                        <span>Anos de experiência</span>
+                    </div>
                 </div>
-                <div class="corpo-cartao">
-                    <p>Com experiência desde <strong>1989</strong>, nossa fundadora transformou sua paixão pela manicure em um negócio de sucesso.</p>
-                    <p>Em janeiro de <strong>2005</strong> nasceu o salão, dedicado exclusivamente ao cuidado das mãos e unhas.</p>
+                <div class="about-text reveal-right">
+                    <h3>Excelência em cada detalhe</h3>
+                    <p>Com experiência desde <strong style="color:var(--rose)">1989</strong>, nossa fundadora transformou sua paixão pela manicure em um negócio de sucesso, dedicado exclusivamente ao cuidado das mãos e unhas.</p>
+                    <p>Em janeiro de <strong style="color:var(--rose)">2005</strong> nasceu oficialmente o Salão da MI, um espaço pensado para oferecer o melhor em beleza e bem-estar com atendimento personalizado.</p>
                     <p>Ao longo dos anos, conquistamos clientes pela qualidade, atenção aos detalhes e carinho em cada atendimento.</p>
-                </div>
-            </div>
-        </section>
-
-        <!--=======================Services==================-->
-        <section id="services" class="secao-cartao">
-            <div class="cartao">
-                <div class="cabecalho-cartao">
-                    <h2>Serviços</h2>
-                </div>
-                <div class="corpo-cartao">
-                    <div class="grade-servicos">
-                        <div class="item-servico">
-                            <h3>Manicure</h3>
-                            <p>Cuidado completo com esmaltação, cutículas e hidratação.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-value" data-count="1989">1989</div>
+                            <div class="stat-label">Início da jornada</div>
                         </div>
-                        <div class="item-servico">
-                            <h3>Pedicure</h3>
-                            <p>Tratamento especial para pés macios e saudáveis.</p>
+                        <div class="stat">
+                            <div class="stat-value" data-count="2005">2005</div>
+                            <div class="stat-label">Fundação do salão</div>
                         </div>
-                        <div class="item-servico">
-                            <h3>Nail Art</h3>
-                            <p>Designs personalizados e decoração criativa.</p>
+                        <div class="stat">
+                            <div class="stat-value" data-count="35">35+</div>
+                            <div class="stat-label">Anos de experiência</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--=======================Contato======================-->
-        <section id="contact" class="secao-cartao">
-            <div class="cartao">
-                <div class="cabecalho-cartao">
-                    <span class="icone">&#9990;</span>
-                    <h2>Contato</h2>
+    <section id="services" class="section services-bg">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-tag">Especialidades</span>
+                <h2>Nossos Serviços</h2>
+                <p>Cuidados completos para realçar a beleza das suas mãos e pés com excelência.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal" style="transition-delay:0.1s">
+                    <div class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+                    <h3>Manicure</h3>
+                    <p>Cuidado completo com esmaltação, cutículas e hidratação para mãos impecáveis e bem cuidadas.</p>
                 </div>
-                <div class="corpo-cartao">
-                    <div class="informacoes-contato">
-                        <div class="item-contato">
-                             <i class="fa-solid fa-phone"></i>
-                            <div>
-                                <strong>Telefone</strong>
-                                <p>*********</p>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="item-contato">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <div>
-                                <strong>WhatsApp</strong>
-                                <p>*********</p>
-                            </div>
-                        </div>
-                        <br>
-                        <a href="https://www.instagram.com/salao_mi/">
-                        <div class="item-contato">
-                            <i class="fa-brands fa-instagram"></i>
-                            <div>
-                                <strong>Instagram</strong>
-                                <p>@salao_mi</p>
-                            </div>
-                        </div>
-                        </a>
-                        <br>
-                        <a href="https://maps.app.goo.gl/ZtzUmuDWac5HKiyx5">
-                        <div class="item-contato localizacao">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <strong>Endereço</strong>
-                                <p>**********</p>
-                            </div>
-                        </div>
-                        <div class="container-mapa">
-                            <iframe src="https://www.google.com/maps/embed?pb=!4v1778156798190!6m8!1m7!1sQ1dGdmrW13VV9bdMbWIcPg!2m2!1d-22.70162166783491!2d-46.7723682496111!3f297.523!4f0!5f0.7820865974627469" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        </a>
-                    </div>
+                <div class="service-card reveal" style="transition-delay:0.2s">
+                    <div class="service-icon"><i class="fa-solid fa-foot"></i></div>
+                    <h3>Pedicure</h3>
+                    <p>Tratamento especial para pés macios, saudáveis e com acabamento perfeito que dura.</p>
+                </div>
+                <div class="service-card reveal" style="transition-delay:0.3s">
+                    <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Nail Art</h3>
+                    <p>Designs personalizados e decoração criativa para unhas únicas e cheias de estilo.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--==============================horario de funcionamentos============================-->
-        <section id="hours" class="secao-cartao">
-            <div class="cartao">
-                <div class="cabecalho-cartao">
-                    <h2>Horário de Funcionamento</h2>
-                </div>
-                <div class="corpo-cartao">
-                    <div class="lista-horarios">
-                        <div class="item-horario">
-                            <span>Segunda a Sexta</span>
-                            <strong>09:00 - 19:00</strong>
-                        </div>
-                        <div class="item-horario">
-                            <span>Sábado</span>
-                            <strong>09:00 - 17:00</strong>
-                        </div>
-                        <div class="item-horario">
-                            <span>Domingo e Feriados</span>
-                            <span class="fechado">Fechado</span>
+    <section id="gallery" class="section">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-tag">Portfólio</span>
+                <h2>Nossos Trabalhos</h2>
+                <p>Cada unha é uma tela em branco. Veja alguns dos nossos melhores trabalhos.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img1.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Nail Art</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img3.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Manicure</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img4.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Nail Art</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img5.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Pedicure</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img6.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Design</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img7.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Manicure</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img8.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Nail Art</span></div></div>
+                <div class="gallery-item reveal-scale"><img src="./assets/img/gallery/img9.webp" alt="Nail art" loading="lazy"><div class="gallery-overlay"><span>Manicure</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials-bg">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-tag" style="background:rgba(255,255,255,0.08);color:var(--rose-light)">Depoimentos</span>
+                <h2>O que nossas clientes dizem</h2>
+                <p>A satisfação de quem confia no nosso trabalho é o que nos motiva todos os dias.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal" style="transition-delay:0.1s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Simplesmente o melhor salão de unhas da região! A atenção aos detalhes é impressionante, e o resultado dura muito mais que qualquer outro lugar."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AM</div>
+                        <div>
+                            <strong>Ana Maria</strong>
+                            <span>Cliente há 5 anos</span>
                         </div>
                     </div>
                 </div>
+                <div class="testimonial-card reveal" style="transition-delay:0.2s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"A Mi é uma artista! Saio de lá sempre me sentindo renovada. O ambiente é acolhedor e o atendimento é nota 10. Super recomendo!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JS</div>
+                        <div>
+                            <strong>Juliana Santos</strong>
+                            <span>Cliente há 3 anos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:0.3s">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Profissionalismo e carinho em cada detalhe. Faço minhas unhas lá há anos e nunca pensei em trocar. Resultado impecável sempre!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CL</div>
+                        <div>
+                            <strong>Camila Lima</strong>
+                            <span>Cliente há 7 anos</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-tag">Fale Conosco</span>
+                <h2>Entre em Contato</h2>
+                <p>Agende seu horário e venha conhecer nosso trabalho. Será um prazer atender você!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-list">
+                    <a href="tel:+5511999999999" class="contact-item" style="text-decoration:none">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Telefone</strong>
+                            <p>*********</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/5511999999999" class="contact-item" style="text-decoration:none" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p>*********</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/salao_mi/" class="contact-item" style="text-decoration:none" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <strong>Instagram</strong>
+                            <p>@salao_mi</p>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/ZtzUmuDWac5HKiyx5" class="contact-item" style="text-decoration:none" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Endereço</strong>
+                            <p>**********</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-map reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1778156798190!6m8!1m7!1sQ1dGdmrW13VV9bdMbWIcPg!2m2!1d-22.70162166783491!2d-46.7723682496111!3f297.523!4f0!5f0.7820865974627469" width="100%" height="350" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização do Salão da MI"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hours" class="section" style="padding-top:0">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-tag">Horários</span>
+                <h2>Funcionamento</h2>
+                <p>Estamos prontos para atender você com todo carinho e dedicação.</p>
+            </div>
+            <div class="hours-list">
+                <div class="hours-item reveal">
+                    <span>Segunda a Sexta</span>
+                    <strong>09:00 — 19:00</strong>
+                </div>
+                <div class="hours-item reveal">
+                    <span>Sábado</span>
+                    <strong>09:00 — 17:00</strong>
+                </div>
+                <div class="hours-item reveal">
+                    <span>Domingo e Feriados</span>
+                    <strong class="hours-closed">Fechado</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="section-inner">
+            <h2 class="reveal">Vem cuidar de você!</h2>
+            <p class="reveal">Agende seu horário agora e descubra o que é ter mãos e unhas impecáveis com quem realmente entende do assunto.</p>
+            <a href="https://wa.me/5511999999999" class="btn-primary reveal" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Agende pelo WhatsApp
+            </a>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Salão da MI. Todos os direitos reservados.</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Salão da MI</h4>
+                <p>Cuidado especializado para suas mãos e unhas com mais de 35 anos de experiência e dedicação.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/5511999999999" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/salao_mi/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://maps.app.goo.gl/ZtzUmuDWac5HKiyx5" aria-label="Localização" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="#about">Sobre</a>
+                <a href="#services">Serviços</a>
+                <a href="#gallery">Galeria</a>
+                <a href="#contact">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Horários</h4>
+                <p>Seg—Sex: 09h — 19h</p>
+                <p>Sábado: 09h — 17h</p>
+                <p>Dom/Fer: Fechado</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>Telefone: *****</p>
+                <p>WhatsApp: *****</p>
+                <p>@salao_mi</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Salão da MI. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    <script src="./assets/js/main.js"></script>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="./assets/js/main.js" defer></script>
 </body>
 </html>
